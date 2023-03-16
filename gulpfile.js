@@ -46,7 +46,7 @@ function scripts() {
 			mode: 'production',
 			performance: { hints: false },
 			plugins: [
-				new webpack.ProvidePlugin({}), // jQuery (npm i jquery)
+				new webpack.ProvidePlugin({  }), // jQuery (npm i jquery)
 			],
 			module: {
 				rules: [
@@ -104,8 +104,6 @@ function images() {
 function buildcopy() {
 	return src([
 		'{app/js,app/css}/*.min.*',
-		'app/js/*.js',
-		'!app/js/app.js',
 		'app/images/**/*.*',
 		'!app/images/src/**/*',
 		'app/fonts/**/*'
