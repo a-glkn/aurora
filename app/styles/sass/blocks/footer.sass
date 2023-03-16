@@ -1,0 +1,69 @@
+.footer
+    padding-top: 80px
+    padding-bottom: 80px
+    .logo
+        width: 349px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 20px
+        img
+            max-width: 100%
+            height: auto
+    .foot-menus
+        display: flex
+        justify-content: space-between
+    .foot-menu
+        ul
+            li
+                margin-bottom: 10px
+                &:last-child
+                    margin-bottom: 0
+                a
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 19px
+                    line-height: 160%
+                    color: #FFFFFF
+                    text-decoration: none
+                    transition: .3s ease
+                    &:hover
+                        color: $accent
+
+    .row-2
+        margin-top: 40px
+        
+    .link-icon_soc
+        margin-bottom: 30px
+
+    .link-icon_phone
+        margin-bottom: 10px
+
+    .foot-links
+        display: flex
+        justify-content: space-between
+    .creds
+        font-style: normal
+        font-weight: 400
+        font-size: 19px
+        line-height: 160%
+        color: #FFFFFF
+        width: 290px
+        margin-left: auto
+        p
+            margin-bottom: 10px
+            opacity: .6
+
++media-breakpoint-down(lg)
+    .footer
+        &-menu
+            display: none
+        .logo
+            margin-bottom: 30px
+            justify-content: center
+
+        .col-right
+            text-align: center
+            .link-phone
+                justify-content: center
+        .soc
+            justify-content: center

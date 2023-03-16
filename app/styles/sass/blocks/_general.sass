@@ -1,0 +1,239 @@
+// COLORS
+.bg-dark
+    background-color: #2B2B2B
+
+.bg-pale
+    background-color: #F9F1EE
+
+.text-accent
+    color: $accent
+
+    
+// GENERAL PROJECT STYLES
+.text-center
+    text-align: center
+
+.btn
+    padding: 15px 20px
+    background: linear-gradient(0deg, #E65E83, #E65E83), linear-gradient(90deg, #D41DAF 0%, #E65E83 51.56%, #FEB369 100%), #FFFFFF
+    font-style: normal
+    font-weight: 700
+    font-size: 18px
+    line-height: 1.38
+    color: #FFFFFF
+    border: 0
+    text-align: center
+    cursor: pointer
+    &_w-100p
+        width: 100%
+
+.link-icon
+    display: flex
+    svg
+        margin-top: auto
+        margin-bottom: auto
+        margin-right: 10px
+    a
+        text-decoration: none
+        margin-top: auto
+        margin-bottom: auto
+        color: #fff
+        transition: .3s ease
+        &:hover
+            color: $accent
+
+
+.inverted
+    *
+        color: #fff
+
+p
+    margin: 0
+
+// HEADINGS
+.heading
+    font-style: normal
+    font-weight: 700
+    font-size: 32px
+    line-height: 130%
+    &_lg
+        font-size: 56px
+    &_xmd
+        font-size: 28px
+    &_sm
+        font-size: 24px
+    &_xsm
+        font-size: 20px
+
+
+// GENERAL BLOCKS
+.soc
+    display: flex
+    li
+        list-style-type: none
+        margin-left: 20px
+        a
+            display: block
+
+.list
+    li
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 160%
+        padding-left: 18px
+        position: relative
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+        &:before
+            width: 10px
+            height: 10px
+            background-color: #E65E83 
+            content: ''
+            display: block
+            position: absolute
+            top: 10px
+            left: 0
+            border-radius: 50%
+
+.form
+    &__input
+        padding-left: 15px
+        padding-right: 15px
+        width: 100%
+        height: 50px
+        color: #2B2B2B
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 120%
+        border: 0
+        margin-bottom: 24px
+        &_tel
+            padding-left: 41px
+            background-image: url(../images/dist/ru.svg)
+            background-repeat: no-repeat
+            background-position: 15px 15px
+     
+    
+    .btn
+        margin-top: 6px
+
+.docs-slider
+    position: relative
+    &__item
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        background-image: url(../images/dist/frame.jpg)
+        width: 361px
+        height: 472px
+        padding: 73px 65px
+        transition: .3s ease
+        transform: scale(.5) !important
+        &.swiper-slide-active
+            transform: scale(1) !important
+
+        img
+            cursor: pointer
+
+.swiper-slide img 
+    display: block
+    width: 100%
+    height: auto
+
+.swiper-button-prev, .swiper-button-next
+    width: 50px
+    height: 50px
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -25px
+    svg
+        path, rect
+            transition: .3s ease
+    &:after
+        display: none
+
+    &:hover
+        svg
+            path, rect
+                stroke: $accent
+
+
+.swiper-button-prev
+    margin-left: -280px    
+.swiper-button-next
+    margin-left: 230px
+
+
++media-breakpoint-down(xl)
+
+    .heading
+        font-size: 30px
+        &_lg
+            font-size: 50px
+        &_xmd
+            font-size: 26px
+        &_sm
+            font-size: 22px
+        &_xsm
+            font-size: 19px
+
+
++media-breakpoint-down(lg)
+    .heading
+        font-size: 28px
+        &_lg
+            font-size: 42px
+        &_xmd
+            font-size: 25px
+        &_sm
+            font-size: 21px
+        &_xsm
+            font-size: 19px
+
++media-breakpoint-down(md)
+  
+    .section-intro
+        background: #F9F1EE !important
+        .bg-mob
+            display: block
+
+    .heading
+        font-size: 26px
+        &_lg
+            font-size: 34px
+        &_xmd
+            font-size: 24px
+        &_sm
+            font-size: 20px
+        &_xsm
+            font-size: 18px
+
+    .swiper-button-prev, .swiper-button-next
+        left: 0
+    .swiper-button-prev
+        margin-left: 0    
+        left: 15px
+    .swiper-button-next
+        margin-left: 0
+        left: auto
+        right: 15px
+
+    .docs-slider
+        &__item
+            width: 320px
+            height: 418px
+            transform: scale(.85) !important
+            &.swiper-slide-active
+                transform: scale(1) !important
+    .section-doscs 
+        .heading
+            margin-bottom: 40px !important
+
+ 
++media-breakpoint-down(sm)
+
+    

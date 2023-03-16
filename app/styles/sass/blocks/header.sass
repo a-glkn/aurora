@@ -1,0 +1,131 @@
+.header
+    background-color: #fff
+    padding-top: 40px
+    padding-bottom: 40px
+    &-wrap
+        display: flex
+        justify-content: space-between
+
+    .logo
+        display: block
+        width: 180px
+        margin-top: auto
+        margin-bottom: auto
+        img
+            width: 100%
+            height: auto
+    .menu
+        margin-top: auto
+        margin-bottom: auto
+        ul
+            display: flex
+            li
+                margin-left: 42px
+                margin-right: 42px
+                a
+                    text-decoration: none
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 1.38
+                    color: $textcolor
+
+    .soc
+        margin-top: auto
+        margin-bottom: auto
+
+.menu-toggler
+    display: none
+    width: 24px
+    height: 24px
+    background-repeat: no-repeat
+    background-position: center
+    position: absolute
+    right: 10px
+    top: 28px
+    background-image: url(../images/dist/menu.svg)
+    cursor: pointer
+
+.menu-openned
+    width: 100%
+    height: 100%
+    overflow: hidden
+.menu-openned .menu-toggler
+    background-image: url(../images/dist/menu-close.svg)
+
+.menu-wrapper
+    user-select: none
+    background-color: #fff
+    display: none
+    position: fixed
+    width: 100%
+    left: 0
+    top: 80px
+    z-index: 100
+    height: calc(100vh - 80px)
+    padding-left: 10px
+    padding-right: 10px
+    overflow-y: auto
+    &:after
+        content: ''
+        display: block
+        width: 118px
+        height: 630px
+        top: 0
+        right: 0
+        position: absolute
+        background-repeat: no-repeat
+        background-position: right center
+        background-image: url(../images/dist/logo-ver.png)
+        background-size: 118px 630px
+    .menu
+        margin-top: 80px
+        ul
+            li
+                margin-bottom: 60px
+                &:last-child
+                    margin-bottom: 0
+                a
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 25px
+                    color: #2B2B2B
+                    text-decoration: none
+
+    .phone-links
+        margin-top: 170px
+    .link-icon
+        a
+            color: $textcolor
+    .soc
+        margin-top: 30px
+        margin-bottom: 60px
+        li
+            margin-left: 0
+            margin-right: 20px
+
+.menu-openned
+    .menu-wrapper
+        display: block
+
++media-breakpoint-down(lg)
+    body
+        padding-top: 80px
+    .header
+        z-index: 99
+        position: fixed
+        height: 80px
+        top: 0
+        left: 0
+        width: 100%
+        padding: 0 !important
+        .logo
+            margin-top: 19px !important
+        .menu
+            display: none
+        .soc
+            display: none
+    .menu-toggler
+        display: block
+
+        

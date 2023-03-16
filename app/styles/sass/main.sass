@@ -1,0 +1,451 @@
+@use 'sass:math'
+@use 'sass:color'
+
+@import config
+@import 'blocks/**/*'
+
+
+.section-intro
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: cover
+    height: calc(100vh - 122px)
+    min-height: 600px
+    display: flex
+    .bg-mob
+        display: none
+        width: 100%
+        height: auto
+    .container
+        margin-top: auto
+        margin-bottom: auto
+    .heading_lg
+        margin-bottom: 10px
+    p
+        margin: 0
+    .btn
+        margin-top: 60px
+
+
+.section-prof
+    padding-top: 80px
+    .heading
+        margin-bottom: 20px
+
+    .prof-block
+        position: relative
+        top: 60px
+
+    .col-btn
+        text-align: right
+
+.prof-block
+    display: flex
+    background-color: #F9F1EE
+    padding: 60px
+    padding-bottom: 120px
+    justify-content: space-between
+    &__item
+        width: 240px
+        background-color: #2B2B2B
+        &-img
+            img
+                max-width: 100%
+                height: auto
+        &-title
+            padding: 20px 15px
+            color: #fff
+            font-style: normal
+            font-weight: 700
+            font-size: 18px
+            line-height: 130%
+
+
+.section-about
+    padding-top: 120px
+    padding-bottom: 80px
+    .logo
+        width: 100%
+        max-width: 365px
+        height: auto
+
+    .heading-main
+        margin-bottom: 10px
+    .col-number
+        margin-top: 20px
+    .img-about
+        max-width: 100%
+        height: auto
+
+
+.feature
+    text-align: center
+    &__icon
+        margin-bottom: 10px
+    &__title
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        line-height: 130%
+        text-align: center
+        margin-bottom: 10px
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 15px
+        line-height: 160%
+        text-align: center
+        color: rgba(43, 43, 43, 0.8)
+
+
+.section-features
+    padding-top: 80px
+    padding-bottom: 80px
+    .heading-main
+        margin-bottom: 50px
+    .col-feature
+        margin-bottom: 40px
+
+.video-block
+    border: 2px solid #FFFFFF
+    padding: 60px
+    position: relative
+    img
+        max-width: 100%
+        height: auto
+    &__play
+        width: 63px
+        height: 63px
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -31.5px
+        margin-top: -31.5px
+        cursor: pointer
+        svg
+            width: 63px
+            height: 63px
+            path, rect
+                transition: .3s ease
+
+        &:hover
+            svg
+                path
+                    fill: $accent
+                    stroke: $accent
+                rect
+                    stroke: $accent
+    
+
+.section-video
+    padding-top: 80px
+    padding-bottom: 80px
+    position: relative
+    .logo-trans
+        width: 832px
+        height: 194px
+        position: absolute
+        top: 38px
+        left: 50%
+        margin-left: -75px
+    .video-block
+        margin-top: 50px
+
+    
+.director-block
+    padding: 2px
+    background: linear-gradient(90deg, rgba(212,29,175,1) 0%, rgba(230,94,131,1) 50%, rgba(254,179,105,1) 100%)
+    &-inner
+        padding: 60px
+        background-color: #fff
+        position: relative
+    &__img
+        width: 100%
+        height: auto
+        max-width: 462px
+        margin-left: 40px
+    &__name
+        margin-left: 40px
+        font-style: normal
+        font-weight: 400
+        font-size: 23px
+        line-height: 160%
+        margin-top: 13px
+        margin-bottom: 13px
+
+    &__logo
+        position: absolute
+        top: -45px
+        left: 0
+        width: 493px
+        height: 102px
+        background-color: #fff
+        display: flex
+        img
+            margin: auto
+            width: 353px
+            height: 82px
+
+    .soc
+        margin-left: 40px
+        li
+            margin-left: 0
+            margin-right: 20px
+
+.section-director
+    padding-top: 80px
+    padding-bottom: 80px
+    .heading
+        margin-bottom: 20px
+
+
+.map-header
+    &__item
+        opacity: 0.5
+        transition: .3s ease
+        padding-bottom: 20px
+        cursor: pointer
+        border-bottom: 2px solid transparent
+        height: 100%
+        &-title
+            font-style: normal
+            font-weight: 700
+            font-size: 20px
+            line-height: 1.35
+            color: #F9F1EE
+        &-subtitle
+            font-style: normal
+            font-weight: 400
+            font-size: 17px
+            line-height: 28px
+            color: #F9F1EE
+        &.active
+            cursor: default
+            opacity: 1
+            border-color: #F9F1EE
+        &:hover
+            opacity: 1
+
+.section-map
+    padding-top: 80px
+    padding-bottom: 80px
+    .map-container
+        margin-top: 20px
+    
+.contacts-block
+    color: $textcolor
+    padding: 1px
+    background: linear-gradient(90deg, rgba(212,29,175,1) 0%, rgba(230,94,131,1) 50%, rgba(254,179,105,1) 100%)
+    &-container
+        background-color: #F9F1EE
+        padding-top: 60px
+        padding-bottom: 60px
+    &__inner
+        width: 280px
+        margin-left: auto
+        margin-right: auto
+
+    p
+        margin-top: 20px
+    .heading_xmd
+        margin-bottom: 30px
+        
+    .heading_xsm
+        margin-bottom: 20px
+
+    .link-icon
+        a
+            color: $textcolor
+            &:hover
+                color: $accent
+
+.section-contacts
+    padding-top: 80px
+    padding-bottom: 80px
+    .heading-main
+        margin-bottom: 30px
+
+.section-doscs
+    padding-top: 80px
+    padding-bottom: 90px
+    .heading
+        margin-bottom: 60px
+
+
++media-breakpoint-down(xl) 
+    .prof-block
+        &__item
+            width: 200px
+            &-title
+                font-size: 16px
+
+    .section-about 
+        .col-number
+            p
+                font-size: 16px
+    .list 
+        li
+            font-size: 18px
+            margin-bottom: 15px
+
+    .director-block
+        .soc
+            margin-left: 0
+        &__img
+            margin-left: 0
+        &__name
+            margin-left: 0
+            font-size: 20px
+
+    .footer
+        padding-top: 60px
+        padding-bottom: 60px
+        .foot-menu ul li a
+            font-size: 16px
+
+        .link-icon a
+            font-size: 16px
+        .creds 
+            p
+                font-size: 16px 
++media-breakpoint-down(lg)
+    .section-intro
+        padding-top: 40px
+        padding-bottom: 40px
+        background: #F9F1EE !important
+        height: auto
+        .bg-mob
+            display: block
+            margin-bottom: 20px
+
+    .prof-block
+        flex-wrap: wrap
+        padding: 40px
+        padding-bottom: 20px
+        &__item
+            margin-bottom: 20px
+            width: calc(50% - 10px)
+
+    .section-prof 
+        padding-top: 60px
+        padding-bottom: 60px
+        .prof-block
+            top: 0
+            margin-top: 40px
+        .col-btn
+            margin-top: 40px
+            text-align: left
+
+    .section-about
+        padding-top: 60px
+        padding-bottom: 40px
+        .img-about
+            margin-top: 40px
+
+    .section-doscs
+        padding-top: 40px
+        padding-bottom: 60px
+
+    .section-features
+        padding-top: 60px
+        padding-bottom: 60px
+
+    .director-block
+        &-inner
+            padding: 60px 40px 40px
+            
+    .section-director
+        .list 
+            li
+                font-size: 16px
+    .section-director
+        padding-top: 60px
+        padding-bottom: 60px
+    .section-map
+        padding-top: 60px
+        padding-bottom: 60px
+    .map-header
+        &__item
+            &-title
+                font-size: 18px
+            &-subtitle
+                font-size: 15px
+
+    .section-contacts
+        padding-top: 60px
+        padding-bottom: 60px
+
+        .form
+            margin-bottom: 40px
+
+    .footer
+        .foot-links
+            margin-top: 30px
+        .foot-menu_policy
+            text-align: center
+        .creds
+            margin-top: 30px
+            margin-left: auto
+            margin-right: auto
+            text-align: center
++media-breakpoint-down(md)
+    .prof-block
+        padding: 30px
+        flex-wrap: nowrap
+        overflow-y: auto
+        &__item
+            margin-right: 15px
+            margin-bottom: 0
+            width: 240px
+            min-width: 240px
+            max-width: 240px
+            &:last-child
+                margin-right: 0
+
+    .video-block
+        padding: 40px
+
+    .director-block
+        &-inner
+            padding: 30px
+        &__img
+            margin-top: 40px
+
+        &__logo
+            top: 0
+            position: static
+            width: 100%
+            height: auto
+            img
+                width: 100%
+                height: auto
+    .map-header
+        &__item
+            border: 0
+
+    .contacts-block
+        &-container
+            padding: 40px
+        &__inner
+            width: 100%
+
+    .footer
+        .logo
+            width: auto
+            text-align: center
+            img
+                display: inline-block
+                max-width: 320px
+        .foot-menus
+            display: block
+            text-align: center
+
+        .foot-links
+            display: block
+            text-align: center
+            .link-icon
+                display: block
++media-breakpoint-down(sm)
+    
+
