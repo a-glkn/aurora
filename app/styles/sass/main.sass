@@ -394,6 +394,11 @@
         padding: 30px
         flex-wrap: nowrap
         overflow-y: auto
+        -ms-overflow-style: none
+        scrollbar-width: none
+        &::-webkit-scrollbar
+            display: none
+
         &__item
             margin-right: 15px
             margin-bottom: 0

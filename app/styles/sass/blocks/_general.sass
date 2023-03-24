@@ -26,6 +26,9 @@
     cursor: pointer
     &_w-100p
         width: 100%
+    &:hover
+        background: linear-gradient(90deg, #D41DAF 0%, #E65E83 51.56%, #FEB369 100%), #FFFFFF
+
 
 .link-icon
     display: flex
@@ -74,6 +77,14 @@ p
         margin-left: 20px
         a
             display: block
+            svg
+                path
+                    transition: .3s ease
+            &:hover
+                svg
+                    path
+                        fill: $accent
+                
 
 .list
     li
@@ -110,11 +121,15 @@ p
         line-height: 120%
         border: 0
         margin-bottom: 24px
+        transition: .3s ease
+        border: 1px solid transparent
         &_tel
             padding-left: 41px
             background-image: url(../images/dist/ru.svg)
             background-repeat: no-repeat
             background-position: 15px 15px
+        &:hover
+            border-color: $accent
      
     
     .btn
